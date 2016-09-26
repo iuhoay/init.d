@@ -64,3 +64,9 @@ curl -sSL https://git.io/vVHhk | bash
 curl -sSL https://git.io/vVHhm | bash
 sudo service elasticsearch status
 ```
+
+### Install rbenv
+
+```bash
+curl -sSL https://git.io/vix0B | bash
+```
