@@ -1,0 +1,17 @@
+echo "Install rbenv"
+echo "-----------------------------------------------------"
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+
+echo "Install rbenv-build"
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+rbenv install 2.3.1
+rbenv global 2.3.1
+echo "gem: --no-document" >> ~/.gemrc
+gem install bundler
+bundle -v
+echo "----------------- Install Successed ------------------"
